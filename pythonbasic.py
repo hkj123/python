@@ -50,3 +50,61 @@ print(classmates);
 #tuple，tuple和list非常类似，但是tuple一旦初始化就不能修改，tuple的陷阱：当你定义一个tuple时，在定义的时候，tuple的元素就必须被确定下来
 t = (1, 2);
 print(t);
+print(t[0]);
+
+#if条件判断
+age = 20
+if age >= 18:
+    print('your age is', age)
+    print('adult')
+
+age1 = 4
+if age1>5:
+    print("1111")
+elif age1 == 4:
+    print("3333333")
+
+#for循环
+names = ['Michael', 'Bob', 'Tracy']
+for name in names:
+    print(name)
+#range()函数，可以生成一个整数序列，再通过list()函数可以转换为list
+print(list(range(5)))
+
+#while循环
+sum = 0
+n = 99
+while n>0:
+    sum = sum + n
+    n = n-2
+print(sum)
+
+#break的作用是提前结束循环
+
+n = 1
+while n <= 100:
+    if n > 10: # 当n = 11时，条件满足，执行break语句
+        break # break语句会结束当前循环
+    print(n)
+    n = n + 1
+print('END')
+
+#continue语句，跳过当前的这次循环，直接开始下一次循环
+n = 0
+while n < 10:
+    n = n + 1
+    if n % 2 == 0: # 如果n是偶数，执行continue语句
+        continue # continue语句会直接继续下一轮循环，后续的print()语句不会执行
+    print(n)
+
+#dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储
+
+d = {"a":"a","b":"b"}
+print("dict示例",d["a"])
+d["c"] = "c"
+print("dict示例",d["c"])
+print(d.get('Thomas'))
+#要删除一个key，用pop(key)方法，对应的value也会从dict中删除
+d.pop("c")
+print("dict示例",d["c"])
+
