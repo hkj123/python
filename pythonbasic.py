@@ -106,5 +106,9 @@ print("dict示例",d["c"])
 print(d.get('Thomas'))
 #要删除一个key，用pop(key)方法，对应的value也会从dict中删除
 d.pop("c")
-print("dict示例",d["c"])
-
+#print("dict示例",d["c"])
+#set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key
+s = set([1, 2, 3])
+s.add(4)
+print(s)
+print(len(s))
