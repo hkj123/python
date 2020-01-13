@@ -50,7 +50,7 @@ print(classmates);
 # tuple，tuple和list非常类似，但是tuple一旦初始化就不能修改，tuple的陷阱：当你定义一个tuple时，在定义的时候，tuple的元素就必须被确定下来
 t = (1, 2);
 print(t);
-print(t[0]);
+print("tuple",t[0]);
 
 # if条件判断
 age = 20
