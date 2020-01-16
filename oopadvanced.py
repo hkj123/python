@@ -116,7 +116,27 @@ class Hello(object):
     def hello(self, name='world'):
         print('Hello, %s.' % name)
 #解释器载入hello模块时，就会依次执行该模块的所有语句，执行结果就是动态创建出一个Hello的class对象
-from hello import Hello
-h = Hello()
-h.hello()
+# from hello import Hello
+# h = Hello()
+# h.hello()
+
+#错误处理
+try:
+    print('try...')
+    assert 1 == 1
+    r = 10 / 1
+    print('result:', r)
+except ZeroDivisionError as e:
+    print('except:', e)
+finally:
+    print('finally...')
+print('END')
+#当我们认为某些代码可能会出错时，就可以用try来运行这段代码，如果执行出错，则后续代码不会继续执行，而是直接跳转至错误处理代码，即except语句块，执行完except后，如果有finally语句块，则执行finally语句块
+
+#调试
+print("代码调试.....print")
+assert 1 == 1
+import logging
+logging.basicConfig(level=logging.INFO)  #debug，info，warning，error
+logging.info("代码调试.....logging")
 
